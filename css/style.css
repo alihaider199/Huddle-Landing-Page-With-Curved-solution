@@ -1,0 +1,419 @@
+:root {
+  --bg-color: hsl(0, 0%, 98%);
+  --white-section: white;
+  --Pink: hsl(322, 100%, 66%);
+  --Light-Pink: hsl(321, 100%, 78%);
+  --Light-Red: hsl(0, 100%, 63%);
+  --neural-Dark-Cyan: hsl(192, 100%, 9%);
+  --neural-Grayish-blue: hsl(229, 6%, 66%);
+  --neural-Pale-Blue: hsl(207, 100%, 98%);
+  --gray-m: rgba(175, 172, 172, 0.896);
+  --line-hight: 1.6;
+  --p-s: 1.4rem;
+  --p-m: 2rem;
+  --p-l: 3rem;
+  --p-xl: 5rem;
+  --p-xxl: 10rem;
+  --m-s: 1rem;
+  --m-m: 2rem;
+  --m-l: 2.4rem;
+  --m-xl: 3.4rem;
+  --light: 200;
+  --md: 400;
+  --bold: 600;
+  --font-family: "Rubik", sans-serif;
+  --border: 1px solid hsl(321, 100%, 78%);
+  --font-heading: "Noto Sans", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 65.2%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+
+  font-family: var(--font-family);
+}
+
+p,
+br {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+.align-center {
+  text-align: center;
+}
+.margin-block-25 {
+  margin-block: 25rem;
+}
+.margin-bottom-10 {
+  margin-block-end: 14rem;
+}
+.margin-bottom-9 {
+  margin-block-end: 11rem;
+}
+.margin-bottom-3 {
+  margin-block-end: 3rem;
+}
+.margin-bottom-5 {
+  margin-block-end: 5rem;
+}
+.margin-bottom-1 {
+  margin-block-end: 0.7rem;
+}
+.primary-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--neural-Dark-Cyan);
+}
+.secndary-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--gray-m);
+}
+.margin-start-1 {
+  margin-block-start: 2.4rem;
+}
+.margin-end-1 {
+  margin-block-end: 2.4rem;
+}
+.tertairy {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--white-section);
+}
+h2 {
+  color: var(--white-section);
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.btn {
+  color: var(--neural-Pale-Blue);
+  background: none;
+  background: var(--Pink);
+  padding-block: 1.6rem;
+  padding-inline: 6rem;
+  border: none;
+  border-radius: 100vmax;
+  cursor: pointer;
+}
+/* *******************HEADER******************** */
+
+header {
+  padding-block-start: 4rem;
+
+  padding-inline: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__items + .nav__items {
+  margin-left: auto;
+}
+
+.nav__btn {
+  background: none;
+  color: var(--Light-Pink);
+  border: var(--border);
+  padding-block: 0.5rem;
+  padding-inline: 1.4rem;
+  border-radius: 100vmax;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* ***************************************************** */
+/* **************main__header*************************** */
+.main-header {
+  width: auto;
+  padding-inline: 4rem;
+  padding-block-end: 10rem;
+}
+.main-header__picture img {
+  width: 55%;
+}
+.grid__span-primary {
+  font-size: 5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.grid__span-secndary {
+  font-size: 1.5rem;
+  color: var(--neural-Grayish-blue);
+}
+.grid__img {
+  align-self: start;
+}
+
+.grid__img img {
+  width: 3rem;
+}
+.grid {
+  color: var(--neural-Dark-Cyan);
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 0.8fr);
+
+  gap: 2rem;
+}
+.grid > * {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+/* this grid class is uniqe its just for main-header */
+/* ************************************************** */
+/* *******************main-section******************* */
+
+.main-section {
+  background: #f6fbff;
+  /* background-color: lime; */
+  position: relative;
+  margin-block-end: 20rem;
+}
+.main-section--3 {
+  background: #f6fbff;
+  margin-block-start: 20rem;
+  /* background-color: lime; */
+  position: relative;
+}
+.main-section-white {
+  background: var(--white-section);
+}
+.main {
+  max-width: 145rem;
+  padding-inline: 4rem;
+
+  padding-block-end: 8rem;
+
+  margin-inline: auto;
+}
+.curve::before {
+  content: "";
+  position: absolute;
+
+  inset: 0;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  transform: translate(0, -35%);
+  z-index: -1;
+}
+.curve::after {
+  content: "";
+  position: absolute;
+
+  inset: 0;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+.curve--1::after {
+  background-image: url(/images/bg-section-bottom-desktop-1.svg);
+  transform: translate(0, 96%);
+}
+.curve--1::before {
+  background-image: url(/images/bg-section-top-desktop-1.svg);
+}
+.curve--2::after {
+  background-image: url(/images/bg-section-bottom-desktop-2.svg);
+  transform: translate(0, 95.5%);
+}
+.curve--2::before {
+  background-image: url(/images/bg-section-top-desktop-2.svg);
+}
+.grid-2-col {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.main__text {
+  width: 80%;
+  padding-inline-start: 2rem;
+  align-self: center;
+}
+.main__img {
+  padding-inline-start: 2rem;
+}
+.main__img img {
+  width: 80%;
+  aspect-ratio: 12/10;
+  object-fit: cover;
+}
+/* ************************************************ */
+/* ***************FOTTER**************************** */
+footer {
+  background: var(--neural-Dark-Cyan);
+  padding-block-end: var(--p-xl);
+  padding-block-start: var(--p-xl);
+
+  /* background: lime; */
+  position: relative;
+}
+.curve--3::before {
+  content: "";
+  position: absolute;
+
+  inset: 0 0 0 0;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  transform: translate(0, -38.5%);
+  z-index: -1;
+  background-image: url(/images/bg-footer-top-desktop.svg);
+}
+.footer__contact > *:where(:not(:last-child)) {
+  margin-block-end: 1.6rem;
+}
+.footer__contact .logos {
+  margin-block-start: 6rem;
+}
+.logos {
+  display: flex;
+  gap: 2rem;
+}
+a:link,
+a:visited {
+  font-size: 4rem;
+  color: var(--white-section);
+  padding-top: 1rem;
+}
+.bg:link,
+.bg:visited {
+  text-decoration: none;
+  background: none;
+  padding: 1rem 1rem 0.7rem 1rem;
+  background-color: var(--white-section);
+  color: var(--neural-Dark-Cyan);
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  align-self: center;
+}
+.footer__phone {
+  display: flex;
+  gap: 1rem;
+}
+.footer__phone img,
+.footer__email img {
+  align-self: center;
+}
+.footer__email {
+  display: flex;
+  gap: 1rem;
+}
+.form {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+form input {
+  padding: 1rem;
+
+  flex-basis: 45%;
+  border-radius: 0.5rem;
+  border: none;
+}
+form button {
+  background-color: var(--Light-Pink);
+  color: var(--white-section);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+@media (max-width: 100.5rem) {
+  .curve--1::before {
+    background-image: url(/images/bg-section-top-desktop-1.svg);
+    transform: translate(0, -31%);
+  }
+
+  .curve--2::before {
+    background-image: url(/images/bg-section-top-desktop-2.svg);
+    transform: translate(0, -29.5%);
+  }
+  .curve--3::before {
+    transform: translate(0, -27.5%);
+  }
+}
+@media (max-width: 48.5rem) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+  .main__text {
+    width: 100%;
+    text-align: center;
+    padding-inline-start: 0;
+  }
+  .main__img {
+    text-align: center;
+  }
+  .main__img img {
+    width: 65%;
+  }
+  .main__img:nth-child(n + 1) {
+    grid-row: 1/2;
+  }
+  .main-header__picture img {
+    width: 70%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+  }
+  .main {
+    padding-inline: 2rem;
+  }
+  .form {
+    gap: 1rem;
+  }
+  form input {
+    flex-grow: 1;
+  }
+  form button {
+    align-self: end;
+  }
+  .nav__items > img {
+    width: 55%;
+  }
+  .main-header {
+    padding-inline: 2rem;
+  }
+  .curve--1::after {
+    background-image: url(/images/bg-section-bottom-mobile-1.svg);
+    transform: translate(0, 100%);
+  }
+  .curve--1::before {
+    background-image: url(/images/bg-section-top-mobile-1.svg);
+    transform: translate(0, -23%);
+  }
+  .curve--2::after {
+    background-image: url(/images/bg-section-bottom-mobile-2.svg);
+    transform: translate(0, 100%);
+  }
+  .curve--2::before {
+    background-image: url(/images/bg-section-top-mobile-2.svg);
+    transform: translate(0, -21%);
+  }
+  .curve--3::before {
+    background-image: url(/images/bg-footer-top-mobile.svg);
+    transform: translate(0, -5%);
+  }
+}
